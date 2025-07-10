@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Solution vs Design</title>
+    <style>
+      .container {
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        height: 600px;
+        margin: 50px auto;
+        overflow: hidden;
+        border-radius: 8px;
+      }
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      #design-frame {
+        z-index: 1;
+      }
+
+      #solution-frame {
+        z-index: 2;
+        clip-path: inset(0 50% 0 0); /* Show left 50% */
+      }
+
+      .slider {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 4px;
+        height: 100%;
+        background: red;
+        z-index: 3;
+        cursor: ew-resize;
+      }
+
+      .handle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30px;
+        height: 30px;
+        background: red;
+        border-radius: 50%;
+        z-index: 4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="compare-box">
+      <iframe id="design-frame" src="./index.html"></iframe>
+      <iframe id="solution-frame" src="/Challenges/001-qr-code-component-main/index.html"></iframe>
+      <div class="slider" id="slider"></div>
+      <div class="handle" id="handle">⇆</div>
+    </div>
+
+    <script>
+      const container = document.getElementById("compare-box");
+      const slider = document.getElementById("slider");
+      const handle = document.getElementById("handle");
+      const solutionFrame = document.getElementById("solution-frame");
+
+      let isDragging = false;
+
+      const moveSlider = (clientX) => {
+        const rect = container.getBoundingClientRect();
+        let x = Math.max(0, Math.min(clientX - rect.left, rect.width));
+        const percent = (x / rect.width) * 100;
+        solutionFrame.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+        slider.style.left = `${percent}%`;
+        handle.style.left = `${percent}%`;
+      };
+
+      container.addEventListener("mousedown", (e) => {
+        isDragging = true;
+        moveSlider(e.clientX);
+      });
+
+      window.addEventListener("mousemove", (e) => {
+        if (isDragging) moveSlider(e.clientX);
+      });
+
+      window.addEventListener("mouseup", () => (isDragging = false));
+
+      container.addEventListener("touchstart", (e) => {
+        isDragging = true;
+        moveSlider(e.touches[0].clientX);
+      });
+
+      container.addEventListener("touchmove", (e) => {
+        if (isDragging) moveSlider(e.touches[0].clientX);
+      });
+
+      window.addEventListener("touchend", () => (isDragging = false));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+[
+  {
+    "Id": 1,
+    "Name": "QR code component",
+    "Tags": ["CSS", "HTML"],
+    "From": "Front-end mentor",
+    "url": "./Challenges/001-qr-code-component-main/index.html",
+    "image": "./Challenges/001-qr-code-component-main/preview.jpg"
+  }
+]
