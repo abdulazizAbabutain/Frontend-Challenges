@@ -5,6 +5,16 @@
     "Tags": ["CSS", "HTML"],
     "From": "Front-end mentor",
     "url": "./Challenges/001-qr-code-component-main/index.html",
+    "difficulty": "newbie",
     "image": "./Challenges/001-qr-code-component-main/preview.jpg"
+  },
+   {
+    "Id": 1,
+    "Name": "Recipe-page",
+    "Tags": ["CSS", "HTML"],
+    "From": "Front-end mentor",
+    "url": "./Challenges/002-Recipe-page/index.html",
+    "difficulty": "newbie",
+    "image": "./Challenges/002-Recipe-page/preview.jpg"
   }
 ]
