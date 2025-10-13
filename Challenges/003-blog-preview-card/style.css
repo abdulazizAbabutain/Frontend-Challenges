@@ -1,0 +1,70 @@
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+
+.card{
+    background-color: hsl(0, 0%, 100%);
+    width: 20rem;
+    border: solid 2px hsl(0, 0%, 7%);
+    border-bottom: solid 10px hsl(0, 0%, 7%);
+    border-right: solid 10px hsl(0, 0%, 7%);
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+}
+
+.link:hover {
+    color: hsl(47, 88%, 63%);;
+    cursor: pointer;
+}
+.content{
+    margin: 0.1rem;
+}
+.tag{
+    background-color: hsl(47, 88%, 63%);
+    width: 5rem;
+    height: 1.5rem;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    font-weight: 800;
+    border-radius: 10%;
+}
+
+
+
+.descprion{
+    color: hsl(0, 0%, 42%);
+    margin-top: 2px;
+}
+
+.image-header {
+    width: 100%;
+    border-radius: 5%;
+}
+
+
+
+.footer {
+    display: flex;
+    flex-direction: row;   
+    align-items: center;
+    gap: 10px;
+}
+
+
+.icone{
+    width:  3rem;
+    height: 3rem;
+}
+
+body{
+    background-color: hsl(47, 88%, 63%);
+    font-size: 16px;
+}
