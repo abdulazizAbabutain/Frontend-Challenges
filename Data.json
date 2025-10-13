@@ -1,0 +1,32 @@
+[
+  {
+    "Id": 1,
+    "ChallengeCode": "002-qr-code-component",
+    "Name": "QR code component",
+    "Tags": ["CSS", "HTML"],
+    "From": "Front-end mentor",
+    "url": "./Challenges/001-qr-code-component-main/index.html",
+    "difficulty": "newbie",
+    "image": "https://placehold.co/400"
+  },
+  {
+    "Id": 2,
+    "ChallengeCode": "002-recipe-page",
+    "Name": "Recipe-page",
+    "Tags": ["CSS", "HTML"],
+    "From": "Front-end mentor",
+    "url": "./Challenges/002-Recipe-page/index.html",
+    "difficulty": "newbie",
+    "image": "https://placehold.co/400"
+  },
+  {
+    "Id": 3,
+    "ChallengeCode": "003-blog-preview-card",
+    "Name": "Blog preview card",
+    "Tags": ["CSS", "HTML"],
+    "From": "Front-end mentor",
+    "url": "./Challenges/003-blog-preview-card/index.html",
+    "difficulty": "newbie",
+    "image": "https://placehold.co/400"
+  }
+]
